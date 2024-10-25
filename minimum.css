@@ -1,0 +1,6 @@
+body {
+    @media (min-width: 1023px) {
+        grid-template-areas: "a";
+        grid-template-rows: minmax(1fr, min-content)
+    }
+}

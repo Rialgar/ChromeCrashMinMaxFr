@@ -1,0 +1,33 @@
+body {
+    display: grid;
+    grid-template-areas:"header" "one" "two" "three";
+    grid-template-rows:repeat(3, minmax(1fr, min-content)) minmax(0, 100%);
+    @media (min-width: 1023px) {
+        grid-template-areas:"header header" "one two" "three three";
+        grid-template-rows:minmax(1fr, min-content) 22rem minmax(0, 1fr)
+    }
+}
+
+div {
+    padding: 5rem;
+}
+
+div.header {
+    grid-area: header;
+    background-color: aqua;
+}
+
+div.one {
+    grid-area: one;
+    background-color: darkgoldenrod;
+}
+
+div.two {
+    grid-area: two;
+    background-color: darksalmon;
+}
+
+div.three {
+    grid-area: three;
+    background-color: darkolivegreen;
+}
